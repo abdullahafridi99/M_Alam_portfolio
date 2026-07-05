@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Luxury Glassmorphism effect */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark .glass-card {
+    background: rgba(11, 31, 58, 0.6);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+  }
+
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .dark .glass-nav {
+    background: rgba(11, 31, 58, 0.9);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+  }
+
+  /* Luxury gold gradients */
+  .btn-gold-grad {
+    background: linear-gradient(135deg, #E5C05E 0%, #D4AF37 50%, #A6841C 100%);
+    color: #051224;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .btn-gold-grad:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .btn-navy-grad {
+    background: linear-gradient(135deg, #1B2F4A 0%, #0B1F3A 100%);
+    color: #FFFFFF;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .btn-navy-grad:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+  }
+
+  .text-gold-grad {
+    background: linear-gradient(135deg, #F0D575 0%, #D4AF37 50%, #A6841C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5F5;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #051224;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4C4C4;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A6841C;
+}
+
+/* Swiper pagination styles override */
+.swiper-pagination-bullet-active {
+  background: #D4AF37 !important;
+}
+
+/* Custom animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
