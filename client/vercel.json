@@ -3,11 +3,15 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://your-render-backend-url.onrender.com/api/:path*"
+      "destination": "https://malamportfoliobackend-production.up.railway.app/api/:path*"
     },
     {
       "source": "/uploads/:path*",
-      "destination": "https://your-render-backend-url.onrender.com/uploads/:path*"
+      "destination": "https://malamportfoliobackend-production.up.railway.app/uploads/:path*"
+    },
+    {
+      "source": "/((?!api|uploads).*)",
+      "destination": "/index.html"
     }
   ]
 }
